@@ -1,0 +1,20 @@
+<div class="container">
+
+  <form [formGroup]="formGroup" >
+    <div class="form-group">
+      <label for="num">Number</label>
+      <input type="text" class="form-control" id="num"
+             placeholder="Enter Number" formControlName="number" name="number"/>
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="current()" name="current">Current</button>
+    <button class="btn btn-primary" type="submit" (click)="subtract(formGroup.value)" name="sub">Subtract</button>
+    <button class="btn btn-primary" type="submit" (click)="add(formGroup.value)" name="add">Add</button>
+    <button class="btn btn-primary" type="submit" (click)="accumulate(formGroup.value)" name="accplus">Accumulate +</button>
+    <button class="btn btn-primary" type="submit" (click)="accumulateS(formGroup.value)" name="accmin">Accumulate -</button>
+
+  </form>
+  <br>
+  <textarea class="form-control" rows="4" cols="15" readonly>
+    {{res}}
+  </textarea>
+</div>
